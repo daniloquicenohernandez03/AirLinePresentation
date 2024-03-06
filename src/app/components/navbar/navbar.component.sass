@@ -1,0 +1,143 @@
+.navigation-drawer
+  position: fixed
+  top: 0
+  left: 0
+  padding: 10px
+  height: 100vh
+  width: 250px
+  background-color: #fff
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1)
+  transform: translateX(-100%)
+  transition: transform 0.3s ease
+  z-index: 1000
+
+.navigation-drawer.open
+  transform: translateX(0)
+
+.navigation-drawer.close
+  transform: translateX(-100%)
+  transition: transform 0.3s ease
+
+.close-button
+  background: none // Elimina cualquier fondo
+  border: none // Elimina cualquier borde
+  cursor: pointer // Cambia el cursor a una mano cuando se pasa sobre la "X"
+  padding: 0 // Elimina cualquier relleno
+  margin: 0 // Elimina cualquier margen
+  font-size: inherit // Usa el tamaño de fuente heredado
+
+  &:hover
+    color: red // Cambia el color cuando se pasa sobre la "X"
+
+
+.drawer-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.world-logo
+  /* Estilos para el logo de mundo */
+  width: 20px
+  filter: brightness(1.1)
+
+.airline-logo
+  /* Estilos para el logo de mundo */
+  width: 80px
+  filter: brightness(1.1)
+
+ul
+  list-style: none // Quita los marcadores de lista
+  padding: 0 // Elimina el relleno
+  margin: 0 // Elimina el margen
+
+ul li
+  padding: 10px 0 // Añade relleno vertical
+  border-bottom: 1px solid #ddd // Añade un divisor
+  margin: 0 // Elimina el margen
+
+ul li:last-child
+  border-bottom: none // Elimina el divisor en el último elemento
+
+.submenu-list
+  display: none // Inicialmente oculta el menú secundario
+  list-style: none // Quita los marcadores de lista
+  padding: 0 // Elimina el relleno
+  margin: 0 // Elimina el margen
+
+.submenu-list.open
+  display: block // Muestra el menú secundario si la clase 'open' está presente
+
+.submenu-list li
+  padding: 10px 0 // Añade relleno vertical
+  border-bottom: 1px solid #ddd // Añade un divisor
+  margin: 0 // Elimina el margen
+
+.submenu-list li:last-child
+  border-bottom: none // Elimina el divisor en el último elemento
+
+.submenu-list
+  display: none // Inicialmente oculta el menú secundario
+  list-style: none // Quita los marcadores de lista
+  padding: 0 // Elimina el relleno
+  margin: 0 // Elimina el margen
+  margin-left: 20px // Mueve el menú secundario hacia la derecha
+
+  &.open
+    display: block // Muestra el menú secundario si la clase 'open' está presente
+
+  li
+    padding: 10px 0 // Añade relleno vertical
+    border-bottom: 1px solid #ddd // Añade un divisor
+    margin: 0 // Elimina el margen
+
+    &:last-child
+      border-bottom: none // Elimina el divisor en el último elemento
+
+.submenu-list
+  display: none
+  list-style: none
+  padding: 0
+  margin: 0
+  margin-left: 20px
+
+  &.open
+    display: block
+
+li
+  padding: 10px 0
+  border-bottom: 1px solid #ddd
+  margin: 0
+
+  &:last-child
+    border-bottom: none
+
+  &.information:hover,
+  &:hover
+    cursor: pointer // Cambia el cursor a una manito cuando pasa por encima
+
+.navbar
+  position: fixed
+  width: 100%
+  align-items: center
+  justify-content: space-between // Alinea los elementos a los extremos
+  background-color: #ffffff // Cambia el color de fondo según tu diseño
+
+.navbar-toggle
+  // Estilos para el botón del menú (☰)
+  background: none // Elimina cualquier fondo
+  border: none // Elimina cualquier borde
+  cursor: pointer // Cambia el cursor a una mano cuando se pasa sobre la "X"
+  font-size: inherit // Usa el tamaño de fuente heredado
+
+.nav-airline-logo
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.nav-airline-logo img
+  width: 80px // Ajusta el tamaño de la imagen según sea necesario
+  margin-right: 10px // Espacio entre la imagen y el texto
+  filter: brightness(1.1)
+.nav-airline-logo .nav-world
+  width: 30px // Ajusta el tamaño de la imagen según sea necesario
+  filter: brightness(1.1)

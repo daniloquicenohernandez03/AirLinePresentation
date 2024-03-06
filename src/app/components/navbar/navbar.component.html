@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="nav-airline-logo">
+    <button class="navbar-toggle" (click)="toggleMenu()">☰</button>
+    <img [src]="images[0].img" alt="AirLine" class="nav-airline">
+    <img [src]="images[1].img" alt="World" class="nav-world">
+  </div>
+</nav>
+
+<div class="navigation-drawer" [class.open]="isMenuOpen">
+  <div class="drawer-header">
+    <button class="close-button" (click)="toggleMenu()">✕</button>
+    <img [src]="images[0].img" alt="AirLine" class="airline-logo">
+    <div class="world-logo">
+      <img [src]="images[1].img" alt="World" class="world-logo">
+    </div>
+  </div>
+  <ul>
+    <li>Check-in</li>
+    <li>Manage my booking</li>
+    <li (click)="toggleInformationMenu()">Information
+      <ul class="submenu-list" [class.open]="isInformationMenuOpen">
+        <li>Help center</li>
+        <li>Flight state</li>
+        <li>Airplanes</li>
+        <li>Routes</li>
+      </ul>
+    </li>
+  </ul>
+</div>
