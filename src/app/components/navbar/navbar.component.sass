@@ -66,6 +66,7 @@ ul li:last-child
   list-style: none // Quita los marcadores de lista
   padding: 0 // Elimina el relleno
   margin: 0 // Elimina el margen
+  margin-left: 20px // Mueve el menú secundario hacia la derecha
 
 .submenu-list.open
   display: block // Muestra el menú secundario si la clase 'open' está presente
@@ -77,13 +78,6 @@ ul li:last-child
 
 .submenu-list li:last-child
   border-bottom: none // Elimina el divisor en el último elemento
-
-.submenu-list
-  display: none // Inicialmente oculta el menú secundario
-  list-style: none // Quita los marcadores de lista
-  padding: 0 // Elimina el relleno
-  margin: 0 // Elimina el margen
-  margin-left: 20px // Mueve el menú secundario hacia la derecha
 
   &.open
     display: block // Muestra el menú secundario si la clase 'open' está presente
