@@ -5,12 +5,18 @@
   width: 100%
   background-color: #E7E6F6
   color: black
-  text-align: center
+  @media screen and (min-width: 650px)
+    text-align: center
 
-.footer-content
-  display: flex
-  justify-content: center
+@media screen and (min-width: 650px)
+  .footer-content
+    display: flex
+    justify-content: center
 
+.footer-logo
+  @media screen and (max-width: 650px)
+    padding-left: 10px
+    
 .footer-logo img
   max-width: 100px
 
@@ -18,8 +24,9 @@
   list-style: none
   padding: 0
 
-.footer-cards
-  display: flex
+@media screen and (min-width: 650px)
+  .footer-cards
+    display: flex
 
 .card
   width: 30%
@@ -49,7 +56,8 @@ ul
 .additional-links
   list-style: none
   padding: 0
-  display: flex
+  @media screen and (min-width: 650px)
+    display: flex
   justify-content: center // Centra los enlaces horizontalmente
 
 .additional-links li
