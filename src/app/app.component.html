@@ -1,12 +1,34 @@
 <app-navbar></app-navbar>
 
-<h1>Hello, {{ title }}</h1>
-<p>Congratulations! Your app is running. 🎉</p>
-
-<div class="image-container">
-    <img src="tu_ruta_de_imagen" alt="Descripción de la imagen">
+<div class="image">
+    <img src="./assets/img/nube.jpg" alt="Nubes fondo">
+        <div class="overlay">
+            <div class="content">
+                <h2>Take a rest</h2>
+                <p>Discover all the offers available<br>at the best prices for the whole country<br>and the world</p>
+            </div>
+            <button class="btn">Buy</button>
+        </div>
+    </div>
+    
+<div class="row">
+    <div class="card">
+        <h2>Offers</h2>
+        <div class="scroll">
+            <div class="image-container-card" *ngFor="let img of images">
+                <img [src]="img.img" [alt]="img.name">
+                <div class="content-card">
+                    <h4>{{ img.name }}</h4>
+                    <p>{{ img.price }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tarjet-info">
+        <img src="./assets/img/informativo.jpeg" alt="Info">
+    </div>
 </div>
-
-<app-footer></app-footer>
-
-<router-outlet />
+    
+    <app-footer></app-footer>
+    
+    <router-outlet />
