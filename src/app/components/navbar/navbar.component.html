@@ -1,17 +1,21 @@
 <nav class="navbar">
   <div class="nav-airline-logo">
     <button class="navbar-toggle" (click)="toggleMenu()">☰</button>
-    <img [src]="images[0].img" alt="AirLine" class="nav-airline">
-    <img [src]="images[1].img" alt="World" class="nav-world">
+    <img [ngSrc]="images[0].img" alt="AirLine" class="nav-airline" [width]="10"
+      [height]="30" priority>
+    <img [ngSrc]="images[1].img" alt="World" class="nav-world" [width]="10"
+      [height]="30" priority>
   </div>
 </nav>
 
 <div class="navigation-drawer" [class.open]="isMenuOpen">
   <div class="drawer-header">
     <button class="close-button" (click)="toggleMenu()">✕</button>
-    <img [src]="images[0].img" alt="AirLine" class="airline-logo">
+    <img [ngSrc]="images[0].img" alt="AirLine" class="airline-logo" [width]="5"
+      [height]="25" priority>
     <div class="world-logo">
-      <img [src]="images[1].img" alt="World" class="world-logo">
+      <img [ngSrc]="images[1].img" alt="World" class="world-logo" [width]="10"
+      [height]="20" priority>
     </div>
   </div>
   <ul>

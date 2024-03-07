@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
 
 <div class="image">
-    <img src="./assets/img/nube.jpg" alt="Nubes fondo">
+    <img ngSrc="./assets/img/nube.jpg" alt="Nubes fondo" [width]="10"
+    [height]="10" priority>
         <div class="overlay">
             <div class="content">
                 <h2>Take a rest</h2>
@@ -16,7 +17,8 @@
         <h2>Offers</h2>
         <div class="scroll">
             <div class="image-container-card" *ngFor="let img of images">
-                <img [src]="img.img" [alt]="img.name">
+                <img [ngSrc]="img.img" [alt]="img.name" [width]="300"
+                [height]="200" priority>
                 <div class="content-card">
                     <h4>{{ img.name }}</h4>
                     <p>{{ img.price }}</p>
@@ -25,7 +27,8 @@
         </div>
     </div>
     <div class="tarjet-info">
-        <img src="./assets/img/informativo.jpeg" alt="Info">
+        <img ngSrc="./assets/img/informativo.jpeg" priority alt="Info" [width]="300"
+       [height]="486">
     </div>
 </div>
     
